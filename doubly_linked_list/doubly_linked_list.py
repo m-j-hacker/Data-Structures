@@ -44,13 +44,37 @@ class DoublyLinkedList:
     return self.length
 
   def add_to_head(self, value):
-    pass
+    new_node = ListNode(value, None)
+
+    # Case for empty linked list
+    if not self.head:
+      self.head = new_node
+      self.tail = new_node
+    elif not self.head.next:
+      new_node.next = self.head
+      self.head = new_node
+    else:
+      self.insert_before(value)
 
   def remove_from_head(self):
-    pass
+    # If the linked list is empty it will not have a head
+    if not self.head:
+      return None
+
+    if not self.head.
 
   def add_to_tail(self, value):
-    pass
+    new_node = ListNode(value)
+
+    # This case is for empty lists
+    if self.tail is None:
+      self.head = new_node
+      self.tail = new_node
+
+    else:
+      # We will set the current reference's next to the new reference and make that the tail
+      self.tail.next = new_node
+      self.tail = new_node
 
   def remove_from_tail(self):
     pass
