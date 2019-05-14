@@ -61,7 +61,18 @@ class DoublyLinkedList:
     if not self.head:
       return None
 
-    if not self.head.
+    # This condition means that we only have 1 item in our list
+    if not self.head.next:
+      head = self.head
+      self.head = None
+      self.tail = None
+      return head.value
+
+    # This condition is for a list with more than 1 item
+    else:
+      value = self.head.value
+      self.head = self.head.next
+      return value
 
   def add_to_tail(self, value):
     new_node = ListNode(value)
@@ -77,10 +88,25 @@ class DoublyLinkedList:
       self.tail = new_node
 
   def remove_from_tail(self):
-    pass
+    # If there is no tail, the list is empty
+    if not self.tail:
+      return None
+
+    # This condition is for only 1 item in the list
+    if not self.tail.prev:
+      tail = self.tail
+      self.head = None
+      self.tail = None
+      return tail.value
 
   def move_to_front(self, node):
-    pass
+    # This function should move a given node to the front of the list, it will remove the node and add it to the head
+
+    # If there is no head, the list is empty
+    if not self.head:
+      return None
+    
+    # If 
 
   def move_to_end(self, node):
     pass
