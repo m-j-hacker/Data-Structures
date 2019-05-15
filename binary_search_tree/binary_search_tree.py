@@ -25,8 +25,11 @@ class BinarySearchTree:
 
   def contains(self, target):
     # Here we need to determine if the target can be found in the search tree
-    # if self.
-    pass
+    if target is None:
+      return target
+    if self.value < target.value:
+      return contains(target.left)
+    return contains(target.right)
 
 
   def get_max(self):
@@ -39,4 +42,6 @@ class BinarySearchTree:
 
   def for_each(self, cb):
     # This function will use the callback on each item in the tree
-    pass
+    while self.right or self.left:
+      cb(self)
+      if self.right and self.left
