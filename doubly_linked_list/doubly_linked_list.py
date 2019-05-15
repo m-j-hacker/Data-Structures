@@ -98,6 +98,12 @@ class DoublyLinkedList:
       self.head = None
       self.tail = None
       return tail.value
+    
+    else:
+      tail = self.tail
+      self.tail.prev.next = None
+      self.tail = self.tail.prev
+      return tail.value
 
   def move_to_front(self, node):
     # This function should move a given node to the front of the list, it will remove the node and add it to the head
@@ -119,7 +125,10 @@ class DoublyLinkedList:
       
 
   def move_to_end(self, node):
-    pass
+    self.tail.next = node
+    node.next = None
+    node.prev = self.tail
+    self.tail = node
 
   def delete(self, node):
     if not node:

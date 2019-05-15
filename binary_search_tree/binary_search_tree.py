@@ -17,7 +17,7 @@ class BinarySearchTree:
         self.left.insert(value)
 
     # If value is greater than or equal to self.value, assign value to right
-    elif value >= self.right:
+    else:
       if not self.right:
         self.right = BinarySearchTree(value)
       else:
@@ -25,15 +25,18 @@ class BinarySearchTree:
 
   def contains(self, target):
     # Here we need to determine if the target can be found in the search tree
-
+    # if self.
+    pass
 
 
   def get_max(self):
     current_max = 0
-    while True:
-      if current_max < self.value
+    
+    while self.right:
+      if current_max < self.value:
         current_max = self.value
       
 
   def for_each(self, cb):
     # This function will use the callback on each item in the tree
+    pass
