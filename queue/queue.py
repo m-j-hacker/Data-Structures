@@ -14,8 +14,9 @@ class Queue:
   
   def dequeue(self):
     if len(self.storage) > 0:
-      self.storage.pop(0)
+      
       self.size -= 1
+      return self.storage.pop(0)
     else:
       return None
 
