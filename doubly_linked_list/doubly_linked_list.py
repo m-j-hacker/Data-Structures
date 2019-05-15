@@ -106,7 +106,12 @@ class DoublyLinkedList:
     if not self.head:
       return None
     
-    # If 
+    # If there is only one item, make no change
+    if self.head = self.tail:
+      pass
+
+    # Otherwise, move an item to the front
+    
 
   def move_to_end(self, node):
     pass
