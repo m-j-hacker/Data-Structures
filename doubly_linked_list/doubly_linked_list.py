@@ -103,21 +103,34 @@ class DoublyLinkedList:
     # This function should move a given node to the front of the list, it will remove the node and add it to the head
 
     # If there is no head, the list is empty
-    if not self.head:
+    if not node:
       return None
     
     # If there is only one item, make no change
-    if self.head = self.tail:
+    elif self.head == self.tail:
       pass
 
     # Otherwise, move an item to the front
-    
+    else:
+      self.head.prev = node
+      node.next = self.head
+      node.prev = None
+      self.head = node
+      
 
   def move_to_end(self, node):
     pass
 
   def delete(self, node):
-    pass
+    if not node:
+      return None
+    else:
+      node.delete()
     
   def get_max(self):
-    pass
+    current = self.head
+    current_max = 0
+    while current.next:
+      if self.value > current_max:
+        current_max = self.value
+    return current_max

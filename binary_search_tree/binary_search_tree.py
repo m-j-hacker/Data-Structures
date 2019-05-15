@@ -24,10 +24,16 @@ class BinarySearchTree:
         self.right.insert(value)
 
   def contains(self, target):
-    pass
+    # Here we need to determine if the target can be found in the search tree
+
+
 
   def get_max(self):
-    pass
+    current_max = 0
+    while True:
+      if current_max < self.value
+        current_max = self.value
+      
 
   def for_each(self, cb):
-    pass
+    # This function will use the callback on each item in the tree
