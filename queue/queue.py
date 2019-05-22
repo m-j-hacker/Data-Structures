@@ -3,13 +3,22 @@ class Queue:
     self.size = 0
     # what data structure should we
     # use to store queue elements?
-    self.storage = 
+    # 
+    # My initial thought is to make our storage into a list
+    # 
+    self.storage = []
 
   def enqueue(self, item):
-    pass
+    self.storage.append(item)
+    self.size += 1
   
   def dequeue(self):
-    pass
+    if len(self.storage) > 0:
+      
+      self.size -= 1
+      return self.storage.pop(0)
+    else:
+      return None
 
   def len(self):
-    pass
+    return self.size
